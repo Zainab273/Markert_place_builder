@@ -5,7 +5,7 @@ const RoomInspiration = () => {
   return (
     <div className="bg-[#fdf7f1] py-12">
       <div className="flex items-center gap-8 ">
-        {/* Left Content */}
+      
         <div className="text-left pl-[100px] pr-[42px] flex flex-col gap-[25px]">
           <div className="flex flex-col gap-2">
             <h2 className="text-[40px] font-bold text-Gray1 leading-[42px]">
@@ -21,9 +21,9 @@ const RoomInspiration = () => {
           </button>
         </div>
 
-        {/* Right Content */}
+
         <div className="w-full md:flex hidden items-center justify-center gap-8 ">
-          {/* Main Image */}
+        
           <div className="relative w-[404px] h-[582px] overflow-hidden ">
             
             <Image src="/images/image-9.png"
@@ -47,7 +47,7 @@ const RoomInspiration = () => {
             </div>
           </div>
 
-          {/* Smaller Images */}
+      
           <div className="flex flex-col justify-between h-[582px]">
             <div className="flex h-[486px] gap-[24px] ">
               <div className="w-[372px]  overflow-hidden">

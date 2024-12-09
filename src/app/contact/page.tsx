@@ -1,46 +1,42 @@
 import React from "react";
-import Footer from "@/components/Footer";
-import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa"; 
-import { MdDeliveryDining, MdAssignmentReturn, MdPayment } from "react-icons/md"; 
-import NavBar from "@/components/NavBar";
-
+import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
+import { MdDeliveryDining, MdAssignmentReturn, MdPayment } from "react-icons/md";
+import Link from "next/link";
 
 const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-     
-      <div
-        className="bg-cover bg-center h-64 flex items-center justify-center text-white"
-        style={{
-          backgroundImage:'/Public/images/rectangle.png', 
-        }}
+    
+      <header
+        className="relative w-full h-[400px] bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/rectangle.png')" }}
       >
-        <div className="flex flex-col items-center justify-center px-4 py-8">
-         
-          <div className="mb-4">
-            <img src="/images/Meubel House_Logos-05.png" alt="Logo" className="h-16 w-auto" />
-          </div>
-
-         
-          <div className="text-center text-black px-4 py-2 rounded font-[500] text-[48px] font-poppins">
-            <h1 className="text-4xl font-bold">Contact</h1>
-            <p className="text-sm mt-2">Home &gt; Contact</p>
-          </div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          <img
+            src="/images/Meubel House_Logos-05.png"
+            alt="Meubel House Logo"
+            className="h-16 w-auto mb-4"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
+          <p className="text-sm md:text-base text-gray-200">
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>{" "}
+            / Contact
+          </p>
         </div>
-      </div>
+      </header>
 
-     
+    
       <section className="container mx-auto px-6 md:px-16 lg:px-32 py-16">
-        <h2 className="text-center text-2xl font-bold mb-4">
-          Get In Touch With Us
-        </h2>
+        <h2 className="text-center text-2xl font-bold mb-4">Get In Touch With Us</h2>
         <p className="text-center text-gray-600 mb-12">
           For more information about our products and services, please feel free
-          to drop us <br /> a line. Our staff is always here to help you out. Do not
-          hesitate!
+          to drop us a line. Our staff is always here to help you out. Do not hesitate!
         </p>
         <div className="flex flex-col md:flex-row gap-12">
-      
+        
           <div className="md:w-1/2 space-y-8">
             <div className="flex items-start space-x-4">
               <FaMapMarkerAlt className="text-black text-xl mt-1" />
@@ -70,29 +66,53 @@ const ContactPage = () => {
          
           <div className="md:w-1/2">
             <form className="space-y-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full border px-4 py-3 rounded-lg"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border px-4 py-3 rounded-lg"
-              />
-              <input
-                type="text"
-                placeholder="Subject (optional)"
-                className="w-full border px-4 py-3 rounded-lg"
-              />
-              <textarea
-                placeholder="Message"
-                rows={5}
-                className="w-full border px-4 py-3 rounded-lg"
-              ></textarea>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your Name"
+                  className="w-full border px-4 py-3 rounded-lg mt-1"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email Address"
+                  className="w-full border px-4 py-3 rounded-lg mt-1"
+                />
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+                  Subject (optional)
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Subject (optional)"
+                  className="w-full border px-4 py-3 rounded-lg mt-1"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Message"
+                  rows={5}
+                  className="w-full border px-4 py-3 rounded-lg mt-1"
+                ></textarea>
+              </div>
               <button
                 type="submit"
-                className="w-full bg-black text-white py-3 rounded-lg hover:bg-slate-500"
+                className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800"
               >
                 Submit
               </button>
@@ -101,7 +121,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      
+
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto flex flex-col md:flex-row justify-around text-center gap-8">
           <div className="flex flex-col items-center">
@@ -121,7 +141,6 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      
     </div>
   );
 };

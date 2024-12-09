@@ -15,7 +15,7 @@ export default function NavBar() {
   return (
     <div className="w-full py-[30px] px-[20px] md:pl-[54px] md:pr-[100px] bg-white">
       <header className="flex justify-between items-center mx-auto h-fit">
-        {/* Logo Section */}
+      
         <div className="flex items-center">
           <Image
             src="/images/Meubel House_Logos-05.png"
@@ -27,7 +27,7 @@ export default function NavBar() {
           <h1 className="text-[24px] md:text-[34px] font-bold">Furniro</h1>
         </div>
 
-        {/* Burger Icon */}
+    
         <div
           className="flex flex-col justify-between w-8 h-6 cursor-pointer md:hidden"
           onClick={toggleMenu}
@@ -48,7 +48,7 @@ export default function NavBar() {
           ></span>
         </div>
 
-        {/* Navigation Menu */}
+      
         <nav
           className={`absolute md:relative left-0 w-full md:w-auto bg-white md:bg-transparent md:flex items-center ${
             isOpen ? "block" : "hidden"
@@ -66,9 +66,9 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-            <a href="/about" className="block py-2 md:py-0 hover:text-gray-500">
-  About
-</a>
+            <Link href="/Blog" className="block py-2 md:py-0 hover:text-gray-500">
+                Blog
+              </Link>
 
             </li>
             <li>
@@ -79,7 +79,7 @@ export default function NavBar() {
           </ul>
         </nav>
 
-        {/* Icons Section */}
+        
         <div className="hidden md:flex items-center gap-[45px]">
           <Link href="/account">
             <Icon

@@ -1,14 +1,10 @@
 import React from "react";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import Link from "next/link";
 
-const AccountPage = () => {
+const AccountPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
      
-      <NavBar />
-
-    
       <main className="container mx-auto mt-8 lg:mt-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
@@ -107,9 +103,6 @@ const AccountPage = () => {
           </div>
         </div>
       </section>
-
-      
-      <Footer />
     </div>
   );
 };
